@@ -10,7 +10,7 @@ package com.myh.zookeeper.lock.abstracts;
 public interface Lock {
 
 	/**
-	 * 获取锁，如果获取不到锁，一直会处于阻塞状态;
+	 * 获取锁，如果获取不到锁，一直会处于阻塞状态;(阻塞式加锁方式)
 	 */
 	public void lock();
 
