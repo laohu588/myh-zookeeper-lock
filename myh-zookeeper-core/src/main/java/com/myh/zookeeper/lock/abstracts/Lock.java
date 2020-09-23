@@ -9,14 +9,14 @@ package com.myh.zookeeper.lock.abstracts;
  */
 public interface Lock {
 
-    /**
-     * 获取锁;
-     */
-    public void lock();
+	/**
+	 * 获取锁，如果获取不到锁，一直会处于阻塞状态;
+	 */
+	public void lock();
 
-    /**
-     * 释放锁;
-     */
-    public void unlock();
+	/**
+	 * 释放锁;
+	 */
+	public void unlock();
 
 }
