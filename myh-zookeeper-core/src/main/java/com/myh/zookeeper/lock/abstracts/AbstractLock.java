@@ -10,7 +10,7 @@ package com.myh.zookeeper.lock.abstracts;
 public abstract class AbstractLock implements Lock {
 
     /**
-     * 阻塞获取锁;
+     * 阻塞式获取锁;
      */
     @Override
     public void lock() {

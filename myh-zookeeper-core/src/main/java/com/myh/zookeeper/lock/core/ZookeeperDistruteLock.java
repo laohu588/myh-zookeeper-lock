@@ -54,9 +54,7 @@ public class ZookeeperDistruteLock extends ZookeeperAbstractLock {
     @Override
     public boolean tryLock() {
         try {
-            // a、创建持久化节点,无法防止死锁的问题;
-            // zkClient.createPersistent(PATH);
-            // b、创建临时节点，可以防止出现死锁的问题;
+            // 创建临时节点，可以防止出现死锁的问题，使用永久节点，容易出现死锁;
             zkClient.createEphemeral(zkProperties.getLockKey());
             return true;
         } catch (Exception e) {
